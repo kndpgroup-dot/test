@@ -14,8 +14,8 @@ const Home = () => {
   const handleAddToCart = (product) => {
     addToCart(product);
     toast({
-      title: 'Added to cart!',
-      description: `${product.name} has been added to your cart.`,
+      title: 'Προστέθηκε στο καλάθι!',
+      description: `${product.name} προστέθηκε στο καλάθι σας.`,
     });
   };
 
@@ -29,26 +29,26 @@ const Home = () => {
             <div className="space-y-6">
               <div className="inline-block">
                 <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-900">
-                  NEW: 🏆 2025 RATED HAIR REMOVAL INNOVATION
+                  ΝΕΟ: 🏆 ΚΑΙΝΟΤΟΜΙΑ ΑΠΟΤΡΙΧΩΣΗΣ 2025
                 </span>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Easy, Painless Hair Removal
+                Εύκολη, Ανώδυνη Αποτρίχωση
               </h1>
               
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <Heart className="w-5 h-5 text-purple-600" fill="currentColor" />
-                  <span className="text-gray-700">Perfect for the bikini area + full body</span>
+                  <span className="text-gray-700">Ιδανικό για την περιοχή του μπικίνι + όλο το σώμα</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Sparkles className="w-5 h-5 text-purple-600" />
-                  <span className="text-gray-700">Easy and painless hair removal</span>
+                  <span className="text-gray-700">Εύκολη και ανώδυνη αποτρίχωση</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-purple-600">🌸</span>
-                  <span className="text-gray-700">Enjoy silky smooth, hair-free skin</span>
+                  <span className="text-gray-700">Απολαύστε μεταξένια λεία, χωρίς τρίχες επιδερμίδα</span>
                 </div>
               </div>
 
@@ -57,7 +57,7 @@ const Home = () => {
                   size="lg" 
                   className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 rounded-lg transition-all duration-300 transform hover:scale-105"
                 >
-                  SHOP CRYSTAL HAIR ERASER
+                  ΑΓΟΡΑΣΤΕ ΤΟ CRYSTAL HAIR ERASER
                 </Button>
               </Link>
 
@@ -67,8 +67,8 @@ const Home = () => {
                     <Star key={i} className="w-4 h-4 text-purple-600" fill="currentColor" />
                   ))}
                 </div>
-                <span className="font-semibold">Excellent 4.8</span>
-                <span className="text-gray-600">| 7,322 trusted reviews</span>
+                <span className="font-semibold">Εξαιρετική 4.8</span>
+                <span className="text-gray-600">| 7.322 έμπιστες αξιολογήσεις</span>
               </div>
             </div>
 
@@ -108,7 +108,7 @@ const Home = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
-            All the hair-free goodness.
+            Όλη η ομορφιά χωρίς τρίχες.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map(product => (
@@ -179,7 +179,7 @@ const Home = () => {
           <div className="text-center mt-8">
             <Link to="/reviews">
               <Button variant="outline" size="lg" className="rounded-full">
-                Read all reviews
+                Διαβάστε όλες τις αξιολογήσεις
               </Button>
             </Link>
           </div>
@@ -190,7 +190,7 @@ const Home = () => {
       <section className="py-16 bg-gradient-to-br from-purple-600 to-pink-600 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            The Future Is Hair-Free! 💜
+            Το Μέλλον Είναι Χωρίς Τρίχες! 💜
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {stats.map(stat => (
@@ -201,7 +201,7 @@ const Home = () => {
             ))}
           </div>
           <p className="text-center mt-8 text-sm opacity-90">
-            * Results according to clinical/consumer studies.
+            * Αποτελέσματα σύμφωνα με κλινικές/καταναλωτικές μελέτες.
           </p>
           <div className="text-center mt-8">
             <Link to="/product/crystal-hair-eraser">
@@ -209,7 +209,7 @@ const Home = () => {
                 size="lg" 
                 className="bg-white text-purple-600 hover:bg-gray-100 rounded-full px-8 text-lg"
               >
-                CLAIM OFFER
+                ΔΙΕΚΔΙΚΗΣΤΕ ΤΗΝ ΠΡΟΣΦΟΡΑ
               </Button>
             </Link>
           </div>
@@ -219,8 +219,8 @@ const Home = () => {
                 <Star key={i} className="w-4 h-4 text-white" fill="currentColor" />
               ))}
             </div>
-            <span className="font-semibold">Excellent 4.8</span>
-            <span>| 7,322 trusted reviews</span>
+            <span className="font-semibold">Εξαιρετική 4.8</span>
+            <span>| 7.322 έμπιστες αξιολογήσεις</span>
           </div>
         </div>
       </section>
@@ -230,9 +230,9 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-lg italic text-gray-700 mb-4">
-              "Easily my best purchase of the year. It was painless and didn't cause any friction even when it was rubbed on the skin. I highly recommend."
+              "Εύκολα η καλύτερη αγορά της χρονιάς μου. Ήταν ανώδυνο και δεν προκάλεσε τριβή ακόμα και όταν το έτριβα στο δέρμα. Το συνιστώ ανεπιφύλακτα."
             </p>
-            <p className="font-semibold text-gray-900">Jane M. - Verified Buyer</p>
+            <p className="font-semibold text-gray-900">Jane M. - Επαληθευμένος Αγοραστής</p>
           </div>
         </div>
       </section>
@@ -254,12 +254,12 @@ const Home = () => {
           </Accordion>
 
           <div className="mt-12 text-center bg-white rounded-2xl p-8 shadow-sm">
-            <h3 className="text-2xl font-bold mb-3 text-gray-900">Have more questions? Contact us</h3>
+            <h3 className="text-2xl font-bold mb-3 text-gray-900">Έχετε περισσότερες ερωτήσεις; Επικοινωνήστε μαζί μας</h3>
             <p className="text-gray-600 mb-6">
-              If you have any additional questions, you can send us an email at hello@bleame.com
+              Εάν έχετε επιπλέον ερωτήσεις, μπορείτε να μας στείλετε email στο hello@bleame.com
             </p>
             <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8">
-              Send us an email
+              Στείλτε μας email
             </Button>
           </div>
         </div>

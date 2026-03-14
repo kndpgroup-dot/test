@@ -11,18 +11,18 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="flex flex-col items-center">
               <Truck className="w-12 h-12 text-purple-600 mb-3" />
-              <h3 className="font-semibold text-gray-900 mb-1">Free Shipping</h3>
-              <p className="text-gray-600 text-sm">On all orders</p>
+              <h3 className="font-semibold text-gray-900 mb-1">Δωρεάν Αποστολή</h3>
+              <p className="text-gray-600 text-sm">Σε όλες τις παραγγελίες</p>
             </div>
             <div className="flex flex-col items-center">
               <Shield className="w-12 h-12 text-purple-600 mb-3" />
-              <h3 className="font-semibold text-gray-900 mb-1">30-Nights Guarantee</h3>
-              <p className="text-gray-600 text-sm">Risk-free trial</p>
+              <h3 className="font-semibold text-gray-900 mb-1">Εγγύηση 30 Ημερών</h3>
+              <p className="text-gray-600 text-sm">Χωρίς ρίσκο</p>
             </div>
             <div className="flex flex-col items-center">
               <RotateCcw className="w-12 h-12 text-purple-600 mb-3" />
-              <h3 className="font-semibold text-gray-900 mb-1">Easy Returns</h3>
-              <p className="text-gray-600 text-sm">Hassle-free process</p>
+              <h3 className="font-semibold text-gray-900 mb-1">Εύκολες Επιστροφές</h3>
+              <p className="text-gray-600 text-sm">Απλή διαδικασία</p>
             </div>
           </div>
         </div>
@@ -39,9 +39,9 @@ const Footer = () => {
               className="w-20 h-20 rounded-lg object-cover"
             />
             <div>
-              <h4 className="font-semibold text-gray-900 mb-2">Shop</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">Αγορά</h4>
               <p className="text-gray-600 text-sm">
-                Forget about cuts, rashes and ingrown hairs. Try Bleame.
+                Ξεχάστε τα κοψίματα, εξανθήματα και ενοχλητικές τρίχες. Δοκιμάστε το Bleame.
               </p>
             </div>
           </div>
@@ -54,21 +54,21 @@ const Footer = () => {
               className="w-20 h-20 rounded-lg object-cover"
             />
             <div>
-              <h4 className="font-semibold text-gray-900 mb-2">Reviews</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">Αξιολογήσεις</h4>
               <p className="text-gray-600 text-sm">
-                Discover what 12,500+ customers have to say about Bleame
+                Ανακαλύψτε τι λένε 12.500+ πελάτες για το Bleame
               </p>
             </div>
           </div>
 
           {/* Help Center Section */}
           <div>
-            <h4 className="font-semibold text-gray-900 mb-2">Help Center</h4>
+            <h4 className="font-semibold text-gray-900 mb-2">Κέντρο Βοήθειας</h4>
             <p className="text-gray-600 text-sm mb-4">
-              Fast Shipping from Nevada, USA
+              Γρήγορη Αποστολή από τη Νεβάδα, ΗΠΑ
             </p>
             <Link to="/help" className="text-purple-600 hover:text-purple-700 font-medium text-sm">
-              Visit Help Center →
+              Επισκεφθείτε το Κέντρο Βοήθειας →
             </Link>
           </div>
         </div>
@@ -83,9 +83,9 @@ const Footer = () => {
               <Shield className="w-6 h-6" />
               <RotateCcw className="w-6 h-6" />
             </div>
-            <p>© 2025 Bleame. All rights reserved.</p>
+            <p>© 2025 Bleame. Όλα τα δικαιώματα διατηρούνται.</p>
             <Link to="/" className="text-purple-600 hover:text-purple-700 font-medium">
-              Log in
+              Σύνδεση
             </Link>
           </div>
         </div>

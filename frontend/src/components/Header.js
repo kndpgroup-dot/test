@@ -26,7 +26,7 @@ const Header = () => {
       {/* Sale Banner */}
       <div className="bg-gradient-to-r from-pink-500 to-purple-600 text-white py-2 text-center text-sm font-medium">
         <div className="flex items-center justify-center gap-4">
-          <span className="hidden sm:inline">❄️ WINTER SALE ENDS IN ❄️</span>
+          <span className="hidden sm:inline">❄️ Η ΧΕΙΜΕΡΙΝΗ ΠΡΟΣΦΟΡΑ ΛΗΓΕΙ ΣΕ ❄️</span>
           <div className="flex gap-2">
             <div className="bg-white text-pink-600 px-2 py-1 rounded font-bold">08</div>
             <div className="bg-white text-pink-600 px-2 py-1 rounded font-bold">37</div>
@@ -37,7 +37,7 @@ const Header = () => {
 
       {/* Limited Time Banner */}
       <div className="bg-purple-100 text-purple-900 py-2 text-center text-sm font-medium">
-        LIMITED TIME: SAVE UP TO 48%
+        ΠΕΡΙΟΡΙΣΜΕΝΗ ΠΡΟΣΦΟΡΑ: ΕΞΟΙΚΟΝΟΜΗΣΤΕ ΕΩΣ 48%
       </div>
 
       {/* Main Navigation */}
@@ -52,14 +52,14 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-6">
             <Link to="/shop">
               <Button variant="default" className="bg-gray-900 hover:bg-gray-800 text-white rounded-full px-6">
-                Shop
+                Αγορά
               </Button>
             </Link>
             <Link to="/reviews" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
-              Reviews
+              Αξιολογήσεις
             </Link>
             <Link to="/help" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
-              Help Center
+              Κέντρο Βοήθειας
             </Link>
           </nav>
 
@@ -98,21 +98,21 @@ const Header = () => {
               className="text-gray-700 hover:text-gray-900 font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Shop
+              Αγορά
             </Link>
             <Link 
               to="/reviews" 
               className="text-gray-700 hover:text-gray-900 font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Reviews
+              Αξιολογήσεις
             </Link>
             <Link 
               to="/help" 
               className="text-gray-700 hover:text-gray-900 font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Help Center
+              Κέντρο Βοήθειας
             </Link>
           </nav>
         </div>
@@ -122,10 +122,10 @@ const Header = () => {
       <div className="bg-gray-900 text-white py-2">
         <div className="container mx-auto px-4 flex items-center justify-center gap-6 text-sm">
           <span className="flex items-center gap-2">
-            <span>🚚</span> Free Shipping Today
+            <span>🚚</span> Δωρεάν Αποστολή Σήμερα
           </span>
           <span className="flex items-center gap-2">
-            <span>💜</span> 175,000+ Happy Babes
+            <span>💜</span> 175.000+ Ευχαριστημένοι Πελάτες
           </span>
         </div>
       </div>
