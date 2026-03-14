@@ -1,0 +1,80 @@
+<div class="cart-page">
+  <div class="container">
+    <h1 class="page-title">Shopping Cart</h1>
+
+    {% if cart.item_count > 0 %}
+      <form action="/cart" method="post" class="cart-form">
+        <div class="cart-content">
+          <div class="cart-items">
+            {% for item in cart.items %}
+              <div class="cart-item" data-line="{{ forloop.index }}">
+                <div class="cart-item-image">
+                  <a href="{{ item.url }}">
+                    <img src="{{ item.image | img_url: '200x200' }}" alt="{{ item.title | escape }}">
+                  </a>
+                </div>
+
+                <div class="cart-item-details">
+                  <h3 class="cart-item-title">
+                    <a href="{{ item.url }}">{{ item.product.title }}</a>
+                  </h3>
+                  
+                  <div class="cart-item-quantity">
+                    <button type="button" class="qty-btn" onclick="updateCartQty({{ forloop.index }}, -1)">-</button>
+                    <input type="number" name="updates[]" value="{{ item.quantity }}" min="0" data-line="{{ forloop.index }}">
+                    <button type="button" class="qty-btn" onclick="updateCartQty({{ forloop.index }}, 1)">+</button>
+                  </div>
+
+                  <div class="cart-item-price">
+                    <span class="price">{{ item.final_line_price | money }}</span>
+                    <span class="unit-price">{{ item.price | money }} each</span>
+                  </div>
+
+                  <a href="/cart/change?line={{ forloop.index }}&quantity=0" class="cart-item-remove">Remove</a>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+          <div class="cart-summary">
+            <h2>Order Summary</h2>
+            
+            <div class="cart-summary-row">
+              <span>Subtotal</span>
+              <span>{{ cart.total_price | money }}</span>
+            </div>
+            
+            <div class="cart-summary-row">
+              <span>Shipping</span>
+              <span class="free-shipping">FREE</span>
+            </div>
+            
+            <div class="cart-summary-total">
+              <span>Total</span>
+              <span>{{ cart.total_price | money }}</span>
+            </div>
+
+            <button type="submit" name="checkout" class="btn btn-primary btn-checkout">
+              Proceed to Checkout
+            </button>
+
+            <div class="cart-guarantees">
+              <div>🚚 Free shipping on all orders</div>
+              <div>🛡️ 30-day money-back guarantee</div>
+              <div>🔒 Secure checkout</div>
+            </div>
+
+            <a href="/collections/all" class="continue-shopping">← Continue shopping</a>
+          </div>
+        </div>
+      </form>
+    {% else %}
+      <div class="cart-empty">
+        <div class="empty-icon">🛍️</div>
+        <h2>Your cart is empty</h2>
+        <p>Looks like you haven't added anything to your cart yet.</p>
+        <a href="/collections/all" class="btn btn-primary">Start shopping</a>
+      </div>
+    {% endif %}
+  </div>
+</div>

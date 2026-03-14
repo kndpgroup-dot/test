@@ -1,0 +1,35 @@
+<div class="announcement-bar" style="background: linear-gradient(to right, #ec4899, #9333ea); color: white; padding: 8px 0; text-align: center; font-size: 14px; font-weight: 500;">
+  <div class="announcement-content">
+    {% if section.settings.show_countdown %}
+      <span>❄️ WINTER SALE ENDS IN ❄️</span>
+      <div class="countdown" style="display: inline-flex; gap: 8px; margin-left: 16px;">
+        <div class="countdown-box" style="background: white; color: #ec4899; padding: 4px 8px; border-radius: 4px; font-weight: bold;">08</div>
+        <div class="countdown-box" style="background: white; color: #ec4899; padding: 4px 8px; border-radius: 4px; font-weight: bold;">37</div>
+        <div class="countdown-box" style="background: white; color: #ec4899; padding: 4px 8px; border-radius: 4px; font-weight: bold;">21</div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+<div class="announcement-bar-secondary" style="background: #f3e8ff; color: #581c87; padding: 8px 0; text-align: center; font-size: 14px; font-weight: 500;">
+  {{ section.settings.announcement_text }}
+</div>
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_countdown",
+      "label": "Show Countdown Timer",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Announcement Text",
+      "default": "LIMITED TIME: SAVE UP TO 48%"
+    }
+  ]
+}
+{% endschema %}

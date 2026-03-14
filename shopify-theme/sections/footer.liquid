@@ -1,0 +1,58 @@
+<section class="trust-badges" style="background: white; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; padding: 40px 0;">
+  <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; text-align: center;">
+      <div>
+        <div style="font-size: 48px; margin-bottom: 12px;">🚚</div>
+        <h3 style="font-weight: 600; margin-bottom: 4px;">Free Shipping</h3>
+        <p style="color: #6b7280; font-size: 14px;">On all orders</p>
+      </div>
+      <div>
+        <div style="font-size: 48px; margin-bottom: 12px;">🛡️</div>
+        <h3 style="font-weight: 600; margin-bottom: 4px;">30-Nights Guarantee</h3>
+        <p style="color: #6b7280; font-size: 14px;">Risk-free trial</p>
+      </div>
+      <div>
+        <div style="font-size: 48px; margin-bottom: 12px;">🔄</div>
+        <h3 style="font-weight: 600; margin-bottom: 4px;">Easy Returns</h3>
+        <p style="color: #6b7280; font-size: 14px;">Hassle-free process</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" style="background: #f9fafb; padding: 48px 0 24px;">
+  <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 32px;">
+      <div>
+        <h4 style="font-weight: 600; margin-bottom: 12px;">Shop</h4>
+        <p style="color: #6b7280; font-size: 14px;">Forget about cuts, rashes and ingrown hairs. Try Bleame.</p>
+      </div>
+      <div>
+        <h4 style="font-weight: 600; margin-bottom: 12px;">Reviews</h4>
+        <p style="color: #6b7280; font-size: 14px;">Discover what 12,500+ customers have to say about Bleame</p>
+      </div>
+      <div>
+        <h4 style="font-weight: 600; margin-bottom: 12px;">Help Center</h4>
+        <p style="color: #6b7280; font-size: 14px; margin-bottom: 8px;">Fast Shipping from Nevada, USA</p>
+        <a href="/pages/help-center" style="color: #9333ea; font-weight: 500; font-size: 14px;">Visit Help Center →</a>
+      </div>
+    </div>
+    
+    <div style="border-top: 1px solid #e5e7eb; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: #6b7280;">
+      <div style="display: flex; gap: 24px;">
+        <span>🚚</span>
+        <span>🛡️</span>
+        <span>🔄</span>
+      </div>
+      <p>© {{ 'now' | date: "%Y" }} {{ shop.name }}. All rights reserved.</p>
+      <a href="/account/login" style="color: #9333ea; font-weight: 500;">Log in</a>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": []
+}
+{% endschema %}

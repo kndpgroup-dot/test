@@ -1,0 +1,51 @@
+<section class="product-badges" style="background: white; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; padding: 40px 0;">
+  <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
+    <div class="badges-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;">
+      {% for block in section.blocks %}
+        <div class="badge-item">
+          <div style="width: 64px; height: 64px; background: #f3e8ff; border-radius: 9999px; display: flex; align-items: center; justify-center; margin: 0 auto 12px;">
+            <span style="font-size: 32px;">{{ block.settings.icon }}</span>
+          </div>
+          <p style="font-weight: 500; color: #111;">{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Badges",
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "Badge",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (emoji)",
+          "default": "✨"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Skin Safe"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Badges",
+      "blocks": [
+        { "type": "badge", "settings": { "icon": "🛡️", "text": "Skin Safe" } },
+        { "type": "badge", "settings": { "icon": "🔄", "text": "Reusable" } },
+        { "type": "badge", "settings": { "icon": "✈️", "text": "Travel Friendly" } },
+        { "type": "badge", "settings": { "icon": "✨", "text": "Easy Clean" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

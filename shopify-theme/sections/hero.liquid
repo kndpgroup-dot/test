@@ -1,0 +1,104 @@
+<section class="hero-section" style="background: linear-gradient(to bottom right, #f3e8ff, #fce7f3, #f3e8ff); padding: 80px 0;">
+  <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
+    <div class="hero-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+      <div class="hero-text">
+        <div class="hero-badge" style="display: inline-block; background: white; padding: 8px 16px; border-radius: 9999px; font-size: 14px; font-weight: 500; margin-bottom: 24px;">
+          NEW: 🏆 {{ section.settings.badge_text }}
+        </div>
+        
+        <h1 class="hero-title" style="font-size: 56px; font-weight: bold; line-height: 1.2; margin-bottom: 24px;">
+          {{ section.settings.title }}
+        </h1>
+        
+        <div class="hero-features" style="margin-bottom: 32px;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <span style="color: #9333ea;">💜</span>
+            <span>{{ section.settings.feature_1 }}</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <span style="color: #9333ea;">✨</span>
+            <span>{{ section.settings.feature_2 }}</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <span>🌸</span>
+            <span>{{ section.settings.feature_3 }}</span>
+          </div>
+        </div>
+
+        <a href="{{ section.settings.button_link }}" class="hero-button" style="display: inline-block; background: #9333ea; color: white; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 18px; transition: transform 0.3s;">
+          {{ section.settings.button_text }}
+        </a>
+
+        <div class="hero-rating" style="display: flex; align-items: center; gap: 8px; margin-top: 24px; font-size: 14px;">
+          <div style="display: flex; color: #9333ea;">
+            ★★★★★
+          </div>
+          <span style="font-weight: 600;">Excellent 4.8</span>
+          <span style="color: #6b7280;">| 7,322 trusted reviews</span>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        {% if section.settings.image %}
+          <img src="{{ section.settings.image | img_url: '800x800' }}" alt="{{ section.settings.title }}" style="width: 100%; border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+        {% else %}
+          <div style="width: 100%; height: 500px; background: #e5e7eb; border-radius: 24px;"></div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "2025 RATED HAIR REMOVAL INNOVATION"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Easy, Painless Hair Removal"
+    },
+    {
+      "type": "text",
+      "id": "feature_1",
+      "label": "Feature 1",
+      "default": "Perfect for the bikini area + full body"
+    },
+    {
+      "type": "text",
+      "id": "feature_2",
+      "label": "Feature 2",
+      "default": "Easy and painless hair removal"
+    },
+    {
+      "type": "text",
+      "id": "feature_3",
+      "label": "Feature 3",
+      "default": "Enjoy silky smooth, hair-free skin"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "SHOP CRYSTAL HAIR ERASER"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ]
+}
+{% endschema %}

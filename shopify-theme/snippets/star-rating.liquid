@@ -1,0 +1,10 @@
+<div class="star-rating" style="display: inline-flex; color: #9333ea; font-size: 20px;">
+  {% assign rating_int = rating | floor %}
+  {% for i in (1..5) %}
+    {% if i <= rating_int %}
+      ★
+    {% else %}
+      ☆
+    {% endif %}
+  {% endfor %}
+</div>

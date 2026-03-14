@@ -1,0 +1,25 @@
+{
+  "current": {
+    "color_primary": "#9333ea",
+    "color_secondary": "#ec4899",
+    "color_text": "#111111",
+    "color_background": "#ffffff",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "show_countdown": true,
+          "announcement_text": "LIMITED TIME: SAVE UP TO 48%"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {}
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {}
+      }
+    }
+  }
+}

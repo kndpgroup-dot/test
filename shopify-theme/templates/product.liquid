@@ -1,0 +1,53 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<div class="product-page">
+  <div class="container">
+    <div class="product-main">
+      <div class="product-gallery">
+        {% render 'product-gallery', product: product %}
+      </div>
+
+      <div class="product-info">
+        <h1 class="product-title">{{ product.title }}</h1>
+        
+        <div class="product-rating">
+          {% render 'star-rating', rating: 4.8 %}
+          <span>({{ product.metafields.custom.review_count | default: '7322' }} reviews)</span>
+        </div>
+
+        <div class="product-price">
+          <span class="price">${{ current_variant.price | money_without_currency }}</span>
+          {% if current_variant.compare_at_price > current_variant.price %}
+            <span class="compare-price">${{ current_variant.compare_at_price | money_without_currency }}</span>
+            <span class="discount-badge">Save {{ current_variant.compare_at_price | minus: current_variant.price | times: 100 | divided_by: current_variant.compare_at_price }}%</span>
+          {% endif %}
+        </div>
+
+        <div class="product-description rte">
+          {{ product.description }}
+        </div>
+
+        {% form 'product', product %}
+          <input type="hidden" name="id" value="{{ current_variant.id }}">
+          
+          <div class="product-quantity">
+            <label for="Quantity">Quantity:</label>
+            <div class="quantity-selector">
+              <button type="button" class="qty-btn" onclick="decreaseQty()">-</button>
+              <input type="number" id="Quantity" name="quantity" value="1" min="1">
+              <button type="button" class="qty-btn" onclick="increaseQty()">+</button>
+            </div>
+          </div>
+
+          <button type="submit" name="add" class="btn btn-primary btn-add-to-cart" {% unless current_variant.available %}disabled{% endunless %}>
+            {% if current_variant.available %}
+              Add to cart
+            {% else %}
+              Sold out
+            {% endif %}
+          </button>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>

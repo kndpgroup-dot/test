@@ -1,0 +1,87 @@
+<section class="stats-banner" style="background: linear-gradient(to bottom right, #9333ea, #ec4899); color: white; padding: 80px 0;">
+  <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 20px; text-align: center;">
+    <h2 style="font-size: 42px; font-weight: bold; margin-bottom: 16px;">
+      {{ section.settings.title }}
+    </h2>
+    
+    <div class="stats-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 48px;">
+      {% for block in section.blocks %}
+        <div class="stat-item">
+          <div style="font-size: 64px; font-weight: bold; margin-bottom: 12px;">{{ block.settings.percentage }}%</div>
+          <p style="font-size: 18px; opacity: 0.9;">{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    
+    <p style="margin-top: 32px; font-size: 14px; opacity: 0.8;">
+      * Results according to clinical/consumer studies.
+    </p>
+    
+    <div style="margin-top: 32px;">
+      <a href="{{ section.settings.button_link }}" style="display: inline-block; background: white; color: #9333ea; padding: 16px 32px; border-radius: 9999px; text-decoration: none; font-weight: 600; font-size: 18px;">
+        {{ section.settings.button_text }}
+      </a>
+    </div>
+    
+    <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 24px; font-size: 14px;">
+      <div style="display: flex; color: white;">★★★★★</div>
+      <span style="font-weight: 600;">Excellent 4.8</span>
+      <span>| 7,322 trusted reviews</span>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Stats Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "The Future Is Hair-Free! 💜"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "CLAIM OFFER"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Stat",
+      "settings": [
+        {
+          "type": "number",
+          "id": "percentage",
+          "label": "Percentage",
+          "default": 95
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Said the appearance of their strawberry legs improved"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stats Banner",
+      "blocks": [
+        { "type": "stat", "settings": { "percentage": 95, "text": "Said the appearance of their strawberry legs improved" } },
+        { "type": "stat", "settings": { "percentage": 94, "text": "Noticed a reduction in the appearance of ingrown hairs" } },
+        { "type": "stat", "settings": { "percentage": 90, "text": "Saw an improvement in the look of skin firmness" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

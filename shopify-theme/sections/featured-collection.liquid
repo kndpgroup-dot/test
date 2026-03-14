@@ -1,0 +1,59 @@
+{% assign collection = collections[section.settings.collection] %}
+
+<section class="featured-collection" style="background: #f9fafb; padding: 80px 0;">
+  <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
+    <h2 style="text-align: center; font-size: 36px; font-weight: bold; margin-bottom: 48px;">
+      {{ section.settings.title }}
+    </h2>
+    
+    <div class="products-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+      {% for product in collection.products limit: section.settings.products_to_show %}
+        <div class="product-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: all 0.3s;">
+          <a href="{{ product.url }}" style="text-decoration: none; color: inherit;">
+            <div class="product-image" style="aspect-ratio: 1; overflow: hidden; background: #f3f4f6;">
+              {% if product.featured_image %}
+                <img src="{{ product.featured_image | img_url: '400x400' }}" alt="{{ product.title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;">
+              {% endif %}
+            </div>
+            <div style="padding: 16px;">
+              <h3 style="font-weight: 600; margin-bottom: 8px;">{{ product.title }}</h3>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "All the hair-free goodness."
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "label": "Products to show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection"
+    }
+  ]
+}
+{% endschema %}
