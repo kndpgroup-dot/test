@@ -1,7 +1,7 @@
 <div class="announcement-bar" style="background: linear-gradient(to right, #ec4899, #9333ea); color: white; padding: 8px 0; text-align: center; font-size: 14px; font-weight: 500;">
   <div class="announcement-content">
     {% if section.settings.show_countdown %}
-      <span>❄️ WINTER SALE ENDS IN ❄️</span>
+      <span>❄️ Η ΧΕΙΜΕΡΙΝΗ ΠΡΟΣΦΟΡΑ ΛΗΓΕΙ ΣΕ ❄️</span>
       <div class="countdown" style="display: inline-flex; gap: 8px; margin-left: 16px;">
         <div class="countdown-box" style="background: white; color: #ec4899; padding: 4px 8px; border-radius: 4px; font-weight: bold;">08</div>
         <div class="countdown-box" style="background: white; color: #ec4899; padding: 4px 8px; border-radius: 4px; font-weight: bold;">37</div>
@@ -16,19 +16,19 @@
 
 {% schema %}
 {
-  "name": "Announcement Bar",
+  "name": "Μπάρα Ανακοινώσεων",
   "settings": [
     {
       "type": "checkbox",
       "id": "show_countdown",
-      "label": "Show Countdown Timer",
+      "label": "Εμφάνιση Χρονομέτρου",
       "default": true
     },
     {
       "type": "text",
       "id": "announcement_text",
-      "label": "Announcement Text",
-      "default": "LIMITED TIME: SAVE UP TO 48%"
+      "label": "Κείμενο Ανακοίνωσης",
+      "default": "ΠΕΡΙΟΡΙΣΜΕΝΗ ΠΡΟΣΦΟΡΑ: ΕΞΟΙΚΟΝΟΜΗΣΤΕ ΕΩΣ 48%"
     }
   ]
 }

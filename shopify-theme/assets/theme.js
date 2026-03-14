@@ -81,12 +81,12 @@ document.addEventListener('DOMContentLoaded', function() {
           .then(response => response.json())
           .then(cart => {
             updateCartCount(cart.item_count);
-            alert('Added to cart!');
+            alert('Προστέθηκε στο καλάθι!');
           });
       })
       .catch(error => {
         console.error('Error:', error);
-        alert('Error adding to cart');
+        alert('Σφάλμα κατά την προσθήκη στο καλάθι');
       });
     });
   });

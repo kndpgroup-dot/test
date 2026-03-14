@@ -12,14 +12,14 @@
         
         <div class="product-rating">
           {% render 'star-rating', rating: 4.8 %}
-          <span>({{ product.metafields.custom.review_count | default: '7322' }} reviews)</span>
+          <span>({{ product.metafields.custom.review_count | default: '7322' }} αξιολογήσεις)</span>
         </div>
 
         <div class="product-price">
           <span class="price">${{ current_variant.price | money_without_currency }}</span>
           {% if current_variant.compare_at_price > current_variant.price %}
             <span class="compare-price">${{ current_variant.compare_at_price | money_without_currency }}</span>
-            <span class="discount-badge">Save {{ current_variant.compare_at_price | minus: current_variant.price | times: 100 | divided_by: current_variant.compare_at_price }}%</span>
+            <span class="discount-badge">Εξοικονόμηση {{ current_variant.compare_at_price | minus: current_variant.price | times: 100 | divided_by: current_variant.compare_at_price }}%</span>
           {% endif %}
         </div>
 
@@ -31,7 +31,7 @@
           <input type="hidden" name="id" value="{{ current_variant.id }}">
           
           <div class="product-quantity">
-            <label for="Quantity">Quantity:</label>
+            <label for="Quantity">Ποσότητα:</label>
             <div class="quantity-selector">
               <button type="button" class="qty-btn" onclick="decreaseQty()">-</button>
               <input type="number" id="Quantity" name="quantity" value="1" min="1">
@@ -41,9 +41,9 @@
 
           <button type="submit" name="add" class="btn btn-primary btn-add-to-cart" {% unless current_variant.available %}disabled{% endunless %}>
             {% if current_variant.available %}
-              Add to cart
+              Προσθήκη στο καλάθι
             {% else %}
-              Sold out
+              Εξαντλήθηκε
             {% endif %}
           </button>
         {% endform %}

@@ -1,6 +1,6 @@
 <div class="cart-page">
   <div class="container">
-    <h1 class="page-title">Shopping Cart</h1>
+    <h1 class="page-title">Καλάθι Αγορών</h1>
 
     {% if cart.item_count > 0 %}
       <form action="/cart" method="post" class="cart-form">
@@ -27,53 +27,53 @@
 
                   <div class="cart-item-price">
                     <span class="price">{{ item.final_line_price | money }}</span>
-                    <span class="unit-price">{{ item.price | money }} each</span>
+                    <span class="unit-price">{{ item.price | money }} το καθένα</span>
                   </div>
 
-                  <a href="/cart/change?line={{ forloop.index }}&quantity=0" class="cart-item-remove">Remove</a>
+                  <a href="/cart/change?line={{ forloop.index }}&quantity=0" class="cart-item-remove">Αφαίρεση</a>
                 </div>
               </div>
             {% endfor %}
           </div>
 
           <div class="cart-summary">
-            <h2>Order Summary</h2>
+            <h2>Περίληψη Παραγγελίας</h2>
             
             <div class="cart-summary-row">
-              <span>Subtotal</span>
+              <span>Υποσύνολο</span>
               <span>{{ cart.total_price | money }}</span>
             </div>
             
             <div class="cart-summary-row">
-              <span>Shipping</span>
-              <span class="free-shipping">FREE</span>
+              <span>Αποστολή</span>
+              <span class="free-shipping">ΔΩΡΕΑΝ</span>
             </div>
             
             <div class="cart-summary-total">
-              <span>Total</span>
+              <span>Σύνολο</span>
               <span>{{ cart.total_price | money }}</span>
             </div>
 
             <button type="submit" name="checkout" class="btn btn-primary btn-checkout">
-              Proceed to Checkout
+              Ολοκλήρωση Αγοράς
             </button>
 
             <div class="cart-guarantees">
-              <div>🚚 Free shipping on all orders</div>
-              <div>🛡️ 30-day money-back guarantee</div>
-              <div>🔒 Secure checkout</div>
+              <div>🚚 Δωρεάν αποστολή σε όλες τις παραγγελίες</div>
+              <div>🛡️ Εγγύηση 30 ημερών επιστροφής χρημάτων</div>
+              <div>🔒 Ασφαλής ολοκλήρωση αγοράς</div>
             </div>
 
-            <a href="/collections/all" class="continue-shopping">← Continue shopping</a>
+            <a href="/collections/all" class="continue-shopping">← Συνέχεια αγορών</a>
           </div>
         </div>
       </form>
     {% else %}
       <div class="cart-empty">
         <div class="empty-icon">🛍️</div>
-        <h2>Your cart is empty</h2>
-        <p>Looks like you haven't added anything to your cart yet.</p>
-        <a href="/collections/all" class="btn btn-primary">Start shopping</a>
+        <h2>Το καλάθι σας είναι άδειο</h2>
+        <p>Φαίνεται ότι δεν έχετε προσθέσει ακόμη τίποτα στο καλάθι σας.</p>
+        <a href="/collections/all" class="btn btn-primary">Ξεκινήστε τις αγορές</a>
       </div>
     {% endif %}
   </div>
